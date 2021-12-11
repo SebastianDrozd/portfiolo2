@@ -2,10 +2,12 @@
     color: white;
     text-decoration: none;
     font-family: var(--font-family);
-    padding: 2em;
+    padding: 1em 2em;
+    transition: 1s;
+    cursor: pointer;
 }
 .nav-item:hover{
-   border-bottom: 1px solid white;
+   transform: scale(1.1);
 }
 .nav-container{
     display: 'flex';

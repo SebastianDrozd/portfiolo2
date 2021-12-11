@@ -8,34 +8,7 @@ import cap11 from '../../assets/cap11.PNG'
 import cap12 from '../../assets/cap12.PNG'
 import cap13 from '../../assets/cap13.PNG'
 const Websites = () => {
-    useEffect(()=> {
-        const video = document.querySelector("video");
 
-function startPreview() {
-  video.muted = true;
-  video.currentTime = 1;
-  video.playbackRate = 0.5;
-  video.play();
-}
-
-function stopPreview() {
-  video.currentTime = 0;
-  video.playbackRate = 1;
-  video.pause();
-}
-let previewTimeout = null;
-
-video.addEventListener("mouseenter", () => {
-  startPreview();
-  previewTimeout = setTimeout(stopPreview, 4000);
-});
-
-video.addEventListener("mouseleave", () => {
-  clearTimeout(previewTimeout);
-  previewTimeout = null;
-  stopPreview();
-});
-    })
     return (
         <div className='sites-outer-container'>
             <br />
@@ -59,14 +32,14 @@ video.addEventListener("mouseleave", () => {
                    <p className="site-title">Modern Website 2</p>
                    <p className='site-description'>A full responsive modern website the abiltty to change uers and do what you please. Full functionis aly islsd with all the hnitgs wyhf one would suspes</p>
                <div className='images-container'>
-                   <div>
+                  
                    <img src={cap10} alt="" />
                    <img src={cap11} alt="" />
-                   </div>
-                   <div>
+                   
+                  
                    <img src={cap12} alt="" />
                    <img src={cap13} alt="" />
-                   </div>
+                  
                </div>
            </div>
             </div>

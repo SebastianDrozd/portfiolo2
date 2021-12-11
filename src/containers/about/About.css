@@ -8,7 +8,7 @@
   .content-card{
     box-shadow: 0 3px 10px 9px rgba(0, 0, 0, 0.1);
     width: 20em;
-    height: 24em;
+    height: 25em;
     background-color: white;
     border-radius: 10px;
     display: flex;
@@ -27,12 +27,14 @@
   }
   .card-logo img{
       width: 6em;
+    
   }
   .card-title{
       font-family: var(--font-family);
-      font-weight: 800;
+      font-weight: 600;
       font-size: 20px;
       padding: 1em;
+      text-align: center;
   }
   .card-description{
     font-family: var(--font-family);
@@ -50,9 +52,10 @@
   @media screen and (max-width: 600px) {
     .about-cards{
         flex-direction: column;
+        padding: 3em;
     }
     .about-main-outer{
-        height: auto
+        height: auto;
       
     }
   }

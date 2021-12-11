@@ -29,7 +29,7 @@ function parallax() {
   var scrolled = window.pageYOffset;
   var parallax = document.querySelector(".parallax");
   // You can adjust the 0.4 to change the speed
-	var coords = (scrolled * 0.6) + 'px'
+	var coords = (scrolled * 0.3) + 'px'
   parallax.style.transform = 'translateY(' + coords + ')';
 };
   },[])
