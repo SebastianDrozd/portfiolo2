@@ -1,0 +1,14 @@
+.nav-item{
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family);
+    padding: 2em;
+}
+.nav-item:hover{
+   border-bottom: 1px solid white;
+}
+.nav-container{
+    display: 'flex';
+    justify-content: center;
+    align-items: center;
+}

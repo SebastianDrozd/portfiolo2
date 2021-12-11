@@ -1,0 +1,94 @@
+<div class="container">
+<form @fade id = "myForm"style="margin-top: 2em !important;padding: 4em;" class="row g-3 customer box" #userForm ="ngForm" novalidate>
+    <div style="margin-bottom: 1em;" class="logo col-md-12"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+    </svg></div>
+    <div class="col-md-6">
+      <label for="validationCustom01" class="form-label">First name <span style="color: red;">*</span></label>
+      
+      <input [(ngModel)]="customer.firstName" name="firstName" type="text" class="form-control input-sm" id="validationCustom01"  required>
+      <div *ngIf="userForm.controls['firstName'].invalid && (userForm.controls['firstName'].dirty || userForm.controls['firstName'].touched)" class="alert alert-danger">
+        <div *ngIf="userForm.controls['firstName'].errors.required">
+       First Name is required.
+      </div>
+    </div>
+      
+    </div>
+    <div class="col-md-6" style="padding-bottom: 1em;">
+      <label for="validationCustom02" class="form-label">Last name <span style="color: red;">*</span></label>
+      <input [(ngModel)]="customer.lastName" name="lasttName" type="text" class="form-control" id="validationCustom02" value="" required>
+      <div *ngIf="userForm.controls['lasttName'].invalid && (userForm.controls['lasttName'].dirty || userForm.controls['lasttName'].touched)" class="alert alert-danger">
+        <div *ngIf="userForm.controls['lasttName'].errors.required">
+        Last Name is required.
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6" style="padding-bottom: 1em;">
+      <label for="validationCustom03" class="form-label">Address</label>
+      <input [(ngModel)]="customer.address.streetAddress" name="address" type="text" class="form-control" id="validationCustom03" >
+     
+    </div>
+    <div class="col-md-3" style="padding-bottom: 1em;">
+      <label for="validationCustom03" class="form-label">City</label>
+      <input [(ngModel)]="customer.address.city" name="city" type="text" class="form-control" id="validationCustom03" >
+     
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom03" class="form-label">State</label>
+      <select [(ngModel)] = "selectedOption" class="form-control" (change)= "onChange($event)">
+      <option [selected]="o.name == selectedOption" *ngFor= "let o of options" >
+        {{o.name}}
+      </option>
+      </select>
+    </div>
+   
+  
+    <div class="col-md-6" style="padding-bottom: 1em;">
+      <label for="validationCustom01"  class="form-label">Phone Number</label>
+      <input [(ngModel)]="customer.phone" pattern="\d*" name="phone" type="text" class="form-control " id="validationCustom01" value="Mark" >
+      <div *ngIf="userForm.controls['phone'].invalid && (userForm.controls['phone'].dirty || userForm.controls['phone'].touched)" class="alert alert-danger">
+        <div *ngIf="userForm.controls['phone'].errors">
+        Phone number is in the incorrect format
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6" style="padding-bottom: 1em;">
+      <label for="validationCustom01" class="form-label">Email</label>
+      <input [(ngModel)]="customer.email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text" class="form-control" id="validationCustom01" value="Mark" >
+      <div *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].dirty || userForm.controls['email'].touched)" class="alert alert-danger">
+        <div *ngIf="userForm.controls['email'].errors">
+        Email is in an incorrect format
+      </div>
+    </div>
+      
+    </div>
+    <div style="padding-bottom: 2em;" class="col-md-12">
+      <label for="exampleFormControlTextarea1" class="form-label">Notes</label>
+      <textarea [(ngModel)]="customer.notes" name="notes" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+   
+    <div style="" class="col-10">
+      
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" ngModel name="save" >
+        <label class="form-check-label" for="invalidCheck">
+          Create a new customer?
+        </label>
+       
+      </div>
+    </div>
+    <div class="col-2">
+    
+      <button type="submit" [disabled] ="!userForm.valid" style="background-color: #4bbd4b; border: none;" class="btn btn-primary float-right" (click)="continue(userForm.value)" >Continue </button>
+    </div>
+    <br>
+    <br>
+   
+  </form>
+  <br>
+  <br>
+</div>
