@@ -1,8 +1,8 @@
 .featured-main-container{
-    height: 30em;
-    padding: 15em;
+    height: 100%;
+    padding: 4em;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: white;
 
@@ -82,4 +82,11 @@
         opacity: 0;
         transition: 2s;
     }
+  }
+  @media screen and (max-width: 1200px) {
+    .featured-main-container{
+    
+        padding: 4em;
+    }
+    
   }
