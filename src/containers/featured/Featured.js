@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './Featured.css'
 import cap from '../../assets/cap.PNG'
+import cap20 from '../../assets/cap20.PNG'
 const Featured = () => {
     useEffect(()=> {
         
@@ -22,7 +23,7 @@ const Featured = () => {
                     </div>
                 </div>
                 <div className="featured-image">
-                    <img id="featured-image" src={cap} alt="" />
+                    <img id="featured-image" src={cap20} alt="" />
                 </div>
             
         </div>

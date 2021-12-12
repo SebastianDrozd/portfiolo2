@@ -61,3 +61,6 @@
     margin: 10px;
     
 }
+.site-buttons{
+    display: flex;
+}
