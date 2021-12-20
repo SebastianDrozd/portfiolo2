@@ -6,6 +6,7 @@ import cap2 from '../../assets/cap2.PNG'
 import cap3 from '../../assets/cap3.png'
 import cap4 from '../../assets/cap4.PNG'
 import pic from '../../assets/pic.png'
+import financeapp from '../../assets/financeapp.png'
 const Middle = () => {
     const handlePanClick = () => {
         window.location = "https://github.com/SebastianDrozd/gamezone"
@@ -21,6 +22,17 @@ const Middle = () => {
            
             <br />
             <br />
+            <div id='pro4' className='middle-pro-container'>
+            <div id="projects" className="featured-texts2">
+                    <p className='feat-project2'>Full Stack Project</p>
+                    <p className='feat-title2'>Personal Finance App</p>
+                    <p className='feat-description2'>A full stack application using the plaid api to access bank account information,transactions, and other financial info. </p>
+                    <button onClick={handlePanClick} className="featured-butt2">View</button>
+                </div>
+                <div className="pro-image">
+                    <img  src={financeapp} alt="" />
+                </div>
+            </div>
             <div id='pro1' className='middle-pro-container'>
             <div id="projects" className="featured-texts2">
                     <p className='feat-project2'>Raspberry Pi Project</p>

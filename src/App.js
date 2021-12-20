@@ -52,6 +52,7 @@ function parallax() {
   observer.observe(document.getElementById('pro1'));
   observer.observe(document.getElementById('pro2'));
   observer.observe(document.getElementById('pro3'));
+  observer.observe(document.getElementById('pro4'));
  
   },[])
   function callbackFunc(entries, observer)
